@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.user_container {
+    width: 950px;
+    height: 800px;
+    box-shadow: 4px 3px 20px saddlebrown;
+    border-radius: 20px;
+    padding: 50px;
+
+}
+.registr {
+    text-align: center;
+    height: 100px;
+    padding: 30px;
+    background-color: rgb(234, 231, 224);
+}
+.first_last {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right:50px;
+    margin-bottom: 20px;
+}
+
+.t_name {
+    display: flex;
+    flex-direction: column;
+}
+
+.first_text {
+    width: 350px;
+    height: 55px;
+    border-radius: 5px;
+    font-size: 18px;
+    padding: 10px;
+
+}
+.form {
+    padding: 10px;
+}
+.label {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+.email {
+    width: 800px;
+    height: 55px;
+    border-radius: 5px;
+    font-size: 18px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.company {
+    width: 800px;
+    height: 55px;
+    border-radius: 5px;
+    font-size: 18px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.physical {
+    width: 800px;
+    height: 55px;
+    border-radius: 5px;
+    font-size: 18px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.user_day {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 50px;
+    margin-bottom: 40px;
+}
+.date_input {
+    width: 200px;
+    height: 55px;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 18px;
+}
+.date_inpu {
+    width: 250px;
+    border-radius: 10px;
+    height: 55px;
+    padding: 10px;
+    font-size: 18px;
+}
+.date_inputd {
+    width: 150px;
+    font-size: 18px;
+    height: 55px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.button_save {
+    width: 800px;
+    height: 50px;
+    padding: 15px;
+    font-size: 20px;
+    margin-bottom: 20px;
+    background-color: blue;
+    color: aliceblue;
+    font-style: italic;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.button_save:hover {
+    background-color: rgb(3, 3, 106);
+    color: rgb(155, 174, 190);
+}

@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.card_container {
+    width:1000px;
+    height: 750px;
+    background-color: rgb(244, 237, 237);
+    padding: 40px;
+    border-radius: 10px;
+    border: 5px solid blueviolet;
+    margin-bottom: 100px;
+}
+
+
+
+.input {
+    width: 900px;
+    height: 50px;
+    padding: 15px;
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: black;
+    cursor: pointer;
+}
+
+.input_bio {
+    width: 900px;
+    height: 120px;
+    padding: 20px 700px 90px 15px;
+    font-size: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.card_create {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.kindly {
+    text-align: center;
+    margin-bottom: 40px;
+}
+.button {
+    width: 900px;
+    height: 50px;
+    padding: 15px;
+    font-size: 20px;
+    margin-bottom: 20px;
+    background-color: blue;
+    color: aliceblue;
+    font-style: italic;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: rgb(3, 3, 106);
+    color: rgb(155, 174, 190);
+}
+
+.will {
+    text-align: center;
+    font-style: italic;
+    font-size: large;
+}
