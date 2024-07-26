@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./index.css";
 
 function Card() {
@@ -13,6 +13,13 @@ function Card() {
     password: "",
     bio: "",
   });
+
+  const [cards, setCards] = useState([]);
+
+  useEffect(() => {
+    const savedCards = JSON.parse(localStorage.getItem('cards')) || [];
+    setCards(savedCards);
+  }, []);
 
   function handleName(event) {
     const nameValue = event.target.value;
@@ -74,14 +81,28 @@ function Card() {
       return;
     }
 
-    let card = {
+    const newCard = {
       name: form.name,
       email: form.email,
       username: form.username,
       password: form.password,
       bio: form.bio,
     };
-    console.log(card);
+
+    const updatedCards = [...cards, newCard];
+    setCards(updatedCards);
+    localStorage.setItem('cards', JSON.stringify(updatedCards));
+
+    console.log(newCard);
+
+    // Clear form fields
+    setForm({
+      name: "",
+      email: "",
+      username: "",
+      password: "",
+      bio: "",
+    });
   }
 
   function validateEmail(email) {
@@ -103,7 +124,7 @@ function Card() {
         </h3>
         <div className="card_input">
           <form>
-          <span className="error">{nameError}</span>
+            <span className="error">{nameError}</span>
             <input
               onChange={handleName}
               value={form.name}

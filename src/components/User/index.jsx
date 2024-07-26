@@ -1,5 +1,5 @@
 import './index.css';
-import { useRef, useState } from 'react';
+import { useRef, useState, useEffect } from 'react';
 
 function User() {
   const nameRef = useRef('');
@@ -12,6 +12,12 @@ function User() {
   const yerRef = useRef('');
 
   const [error, setError] = useState('');
+  const [users, setUsers] = useState([]);
+
+  useEffect(() => {
+    const savedUsers = JSON.parse(localStorage.getItem('users')) || [];
+    setUsers(savedUsers);
+  }, []);
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -35,7 +41,7 @@ function User() {
       return;
     }
 
-    const test = {
+    const newUser = {
       name,
       last,
       email,
@@ -46,8 +52,22 @@ function User() {
       year,
     };
 
-    console.log(test);
+    const updatedUsers = [...users, newUser];
+    setUsers(updatedUsers);
+    localStorage.setItem('users', JSON.stringify(updatedUsers));
+
+    console.log(newUser);
     setError('');
+
+    
+    nameRef.current.value = '';
+    lastRef.current.value = '';
+    emailRef.current.value = '';
+    comRef.current.value = '';
+    addRef.current.value = '';
+    monRef.current.value = '';
+    dayRef.current.value = '';
+    yerRef.current.value = '';
   }
 
   return (
@@ -95,7 +115,7 @@ function User() {
         </form>
       </div>
     </div>
-  )
+  );
 }
 
 export default User;
